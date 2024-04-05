@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "TweeFeed",
+  "version": "1.0",
+  "description": "Enhances tweet reply functionality by adding a quick-reference button.",
+  "icons": {
+    "48": "icon.png"
+  },
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://twitter.com/*"],
+      "js": ["script.js"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["icon.png"],
+      "matches": ["*://twitter.com/*"]
+    }
+  ]
+}
